@@ -1,0 +1,112 @@
+{
+    "organization": {
+        "domain": "sylklabs"
+    },
+    "configs": {
+        "protoBasePath": "protos",
+        "host": "localhost",
+        "port": 44880
+    },
+    "sylkVersion": "0.3.4",
+    "project": {
+        "uri": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todoapp-ts",
+        "name": "todoapp-ts",
+        "packageName": "todoappts",
+        "clients": [
+            {
+                "language": "typescript",
+                "outDir": "/Users/amitshmulevitch/Projects/sylk/sylk-examples/todoapp-ts/client/typescript"
+            }
+        ],
+        "server": {
+            "language": "typescript"
+        }
+    },
+    "packages": {
+        "sylklabs/Todos/v1": {
+            "name": "Todos",
+            "package": "sylklabs.Todos.v1",
+            "messages": [
+                {
+                    "name": "Task",
+                    "fullName": "sylklabs.Todos.v1.Task",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "fullName": "sylklabs.Todos.v1.Task.id",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 1
+                        },
+                        {
+                            "name": "title",
+                            "fullName": "sylklabs.Todos.v1.Task.title",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 2
+                        },
+                        {
+                            "name": "description",
+                            "fullName": "sylklabs.Todos.v1.Task.description",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 3
+                        },
+                        {
+                            "name": "done",
+                            "fullName": "sylklabs.Todos.v1.Task.done",
+                            "fieldType": "TYPE_BOOL",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 4
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                },
+                {
+                    "name": "TaskId",
+                    "fullName": "sylklabs.Todos.v1.TaskId",
+                    "fields": [
+                        {
+                            "name": "id",
+                            "fullName": "sylklabs.Todos.v1.TaskId.id",
+                            "fieldType": "TYPE_STRING",
+                            "label": "LABEL_OPTIONAL",
+                            "type": "descriptor",
+                            "kind": "field",
+                            "index": 1
+                        }
+                    ],
+                    "type": "descriptor",
+                    "kind": "message"
+                }
+            ],
+            "type": "package",
+            "services": [
+                {
+                    "name": "TaskService",
+                    "fullName": "sylklabs.Todos.v1.TaskService",
+                    "methods": [
+                        {
+                            "name": "GetTask",
+                            "fullName": "Todos.v1.TaskService.GetTask",
+                            "inputType": "sylklabs.Todos.v1.TaskId",
+                            "outputType": "sylklabs.Todos.v1.Task",
+                            "type": "descriptor",
+                            "kind": "method"
+                        }
+                    ],
+                    "type": "service"
+                }
+            ]
+        }
+    }
+}
